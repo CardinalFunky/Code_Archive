@@ -1,7 +1,7 @@
 clc
 clear
 
-image = imread( 'lena_gray.bmp' ); 
+image = imread( 'lena_gray.bmp' );
 k = 3;
 
 iterations = 0;
