@@ -58,7 +58,7 @@ while ( previousCenters ~= centers )
     
     centers = kAverage
     
-    figure(1),imshow(ClusImg,[]), pause(0.2); %
+    figure(1),imshow(ClusImg,[]), pause(0.2); 
     
     if iterations > MaxIteration
         break;
