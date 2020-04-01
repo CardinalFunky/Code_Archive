@@ -1,0 +1,29 @@
+- Base Classes:
+    - Hero (Base):
+        - Stats (Base):
+            - HP
+            - Mana
+            - Physical_Atk
+            - Physical_Defense
+            - Physical_Pen_Points
+            - Physical_Pen_Percent
+            - Physical_Lifesteal
+            - Hp_Regen
+            - Mana_Regen
+            - Mana_Power
+            - Mana_Defense
+            - Magic_Pen_Points
+            - Magic_Pen_Percent
+            - Magic_Lifesteal
+            - Movement_Spd
+            - Cd_Reduction
+            - Attack_Speed
+            - Crit_Chance
+            - Spell_Vamp
+            - Name
+            - Role
+            - Specialty
+- Specific Classes:
+    - Hero (Specific):
+        - Main Passive (Specific)
+        - Main 3 Skills
