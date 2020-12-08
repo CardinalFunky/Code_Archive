@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Bubble Sort</title>
+  </head>
+  <body>
+    <div class="row-fluid title-content" style="background-color: skyblue;">
+        <h1 class="text-center">The Bubble Sort Algorithm</h1>
+        <h2 class="text-center">Using Numbers</h2>
+        <h3 class="text-center">From Least To Greatest</h2>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="../JavaScript/jquery-3.5.1.slim.js"></script>
+
+     <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        function bubbleSort_LeastToGreatest(list) {
+            let complete = false;
+            let dummyList = list;
+            let flag = 0;
+            let count = 0;
+
+            while(!complete) {
+                count++;
+                let div = "<div class='container-fluid content-" + count +"' style='padding: 0; margin: 0; margin-left: 1%; float: left;'></div>"
+                $("body").append(div);
+
+                $(".content-" + count).append("<h2>Cycle #" + count + "</h2>");
+
+                for(let i = 0; i < dummyList.length; i++) {
+                    if(dummyList[i] > dummyList[i + 1]) {
+                        flag += 1;
+                        let temp = dummyList[i];
+                        dummyList[i] = dummyList[i + 1];
+                        dummyList[i + 1] = temp;
+                    }
+
+                    $(".content-" + count).append("<h4>" + dummyList + "</h4>");
+                }
+                
+                if(flag == 0) {
+                    complete = true;
+                }
+                
+                flag = 0;
+            }
+            
+            return dummyList;
+        }
+
+        // Algorithm Testing
+        let testArray = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+        console.log(bubbleSort_LeastToGreatest(testArray));
+    </script>
+  </body>
+</html>
