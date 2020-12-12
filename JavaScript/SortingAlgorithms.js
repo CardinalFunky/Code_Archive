@@ -21,7 +21,7 @@ function bubbleSort_LeastToGreatest(list) {
 
             console.log(dummyList);
         }
-        
+
         if(flag == 0) {
             complete = true;
         }
@@ -33,5 +33,5 @@ function bubbleSort_LeastToGreatest(list) {
 }
 
 // Algorithm Testing
-let testArray = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+let testArray = [5, 4, 3, 2, 1, 0];
 console.log(bubbleSort_LeastToGreatest(testArray));
